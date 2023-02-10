@@ -1,3 +1,5 @@
+import time
+
 pou = Actor ('character')
 pou.pos = 100, 50
 
@@ -13,13 +15,21 @@ def update ():
     if pou.left > WIDTH:
        pou.right = 0
 
+def set_pou_normal():
+    pou.image = 'character'
+
+def set_pou_hurt():
+    pou.image = 'click'
+    sounds.clicked.play()
+
+
 def on_mouse_down(pos, button):
     if button == mouse.LEFT and pou.collidepoint(pos):
         print("Eek!")
-
-def on_mouse_down(pos):
     if pou.collidepoint(pos):
-        click.wav.play()
-        pou.image = 'character_click'
-        time.sleep(1)
+        sounds.clicked.play()
+        set_pou_hurt()
+        pou.image = 'click'
+        time.sleep(3)
+        clock.schedule_unique(set_pou_normal, 1.0)
         pou.image = 'character'
