@@ -36,11 +36,19 @@
 </ul>
 
 <h2 id="board">Board Game Exploration</h2>
-<p>content about the board game development exercise</p>
+<p>The board game was easy to develop but it was a bit confusing when trying to come up with a set rules and and a stroyline. </p>
 
 <h2 id ="video">Video Game Exploration</h2>
-<p>content about the video game development exercise</p>
+<p>The video game was a lot harder than the board game. The hardest thing was getting the art to change in the tutorial. I had the code looking right but nothing happned. </p>
 <pre>
-  if game_over:
-    sounds.womp_womp.play()
+def on_mouse_down(pos, button):
+    if button == mouse.LEFT and pou.collidepoint(pos):
+        print("Eek!")
+    if pou.collidepoint(pos):
+        sounds.clicked.play()
+        set_pou_hurt()
+        pou.image = 'click'
+        time.sleep(3)
+        clock.schedule_unique(set_pou_normal, 1.0)
+        pou.image = 'character'
 </pre>
