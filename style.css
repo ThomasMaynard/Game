@@ -22,3 +22,7 @@
 #topNav > ul > li > a:hover {
   color: lime;
 }
+@font-face {
+  font-family: 'ms-sans-serif';
+  src: url(https://thomasmaynard.github.io/Game/fonts/ms_sans_serif.woff);
+}
