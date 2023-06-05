@@ -26,3 +26,14 @@
   font-family: 'ms-sans-serif';
   src: url(https://thomasmaynard.github.io/Game/fonts/ms_sans_serif.woff);
 }
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
