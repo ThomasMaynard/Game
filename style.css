@@ -37,3 +37,9 @@ h2 {
 p {
   font-size: 20px;
 }
+.greentext {
+   color: green;
+} 
+.whitetext {
+   color: white;
+} 
